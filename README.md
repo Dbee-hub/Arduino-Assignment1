@@ -11,7 +11,7 @@ It counts down from 5 to 1 using a while loop. On each step:- It prints "Count: 
 When the countdown finishes, it prints "=== Countdown Complete ===".
  
 ## Concepts demonstrated
- - Variables (int)- Functions with parameters (flashLED)- The while loop- Digital output (digitalWrite, pinMode)- The Serial Monitor (Serial.begin, Serial.print, Serial.println)
+ - Variables (int)- Functions with parameters (flashLED)- The for loop- Digital output (digitalWrite, pinMode)- The Serial Monitor (Serial.begin, Serial.print, Serial.println)
  
 ## How to run it
  
