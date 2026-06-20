@@ -6,7 +6,7 @@ at Ghana Communication Technology University, Bsc Computer Engineering Group A.
  
 ## What this program does
  
-It counts down from 5 to 1 using a while loop. On each step:- It prints "Count: N" to the Serial Monitor.- It blinks the on-board LED N times using a function called flashLED().
+It counts down from 5 to 1 using a for loop. On each step:- It prints "Count: N" to the Serial Monitor.- It blinks the on-board LED N times using a function called flashLED().
  
 When the countdown finishes, it prints "=== Countdown Complete ===".
  
