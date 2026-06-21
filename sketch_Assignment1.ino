@@ -1,33 +1,38 @@
-const int ledPin = 13; 
-const int startValue = 5; 
+int LED_PIN = 13; // Changed to const to protect the pin assignment
+int startValue = 5;
 
-// Function to flash the LED a specified number of times
 void flashLED(int times) {
-  for (int i = 0; i < times; i++) {
-    digitalWrite(ledPin, HIGH);
+  int flashCount = 0;
+  // Keeps the exact same while loop mechanic
+  while (flashCount < times) {
+    digitalWrite(LED_PIN, HIGH);
+    delay(100);
+    digitalWrite(LED_PIN, LOW);
     delay(200);
-    digitalWrite(ledPin, LOW);
-    delay(200);
+    flashCount++; // In-place post-increment shorthand
   }
 }
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  pinMode(LED_PIN, OUTPUT);
   Serial.begin(9600);
-  Serial.println("=== Smart Countdown Starting ==="); 
 
-  for (int count = startValue; count > 0; count--) {
+  Serial.println("=== Smart Countdown Starting ===");
+  int count = startValue; 
+
+  // Keeps the exact same countdown while loop mechanic
+  while (count > 0) {
     Serial.print("Counter is: ");
     Serial.println(count);
     
-    // Blink LED according to current counter value
-    flashLED(count);
-    delay(1000);
+    flashLED(count); 
+    delay(1000);         
+    count--; // In-place post-decrement shorthand
   }
-  
+
   Serial.println("=== Countdown Complete ===");
 }
 
 void loop() {
-  // Empty, as the task runs only once in setup
+  // Unused loop block
 }
